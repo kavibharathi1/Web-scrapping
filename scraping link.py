@@ -1,9 +1,9 @@
 import requests
-from bs4 import Beautifu
+from bs4 import BeautifulSoup
 
 def extracting(url):
-    response =request.get(url=url).content
-    soup =BeatifulSoup(response, 'lxml')
+    response =requests.get(url=url).content
+    soup =BeautifulSoup(response, 'lxml')
     image=soup.find_all("img" , {"class": "mntl-lightbox__img"})
     print(image)
     for img in image:
