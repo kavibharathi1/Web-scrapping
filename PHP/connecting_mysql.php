@@ -1,8 +1,8 @@
 <?php
-$connect = mysqli_connect("localhost" , "root" , "" , "student"); //here, we have connected database
-$sql = "SELECT * from grade_1"; // here, we have selected table
+$connect = mysqli_connect("localhost" , "root" , "" , "student"); 
+$sql = "SELECT * from grade_1"; 
 
-$result =mysqli_query($connect,$sql);//next, we going to link database and table
+$result =mysqli_query($connect,$sql);
 $resultcheck = mysqli_num_rows($result);
 if($resultcheck>0);{
 	while($row=mysqli_fetch_assoc($result))
